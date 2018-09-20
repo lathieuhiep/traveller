@@ -48,6 +48,10 @@
         }
         /* btn mobile End */
 
+        /* Start Slider Global */
+        $( document ).general_owlCarousel_item( '.slider-global' );
+        /* End Slider Global */
+
         /* Start Gallery Single */
         $( document ).general_owlCarousel_item( '.site-post-slides' );
         /* End Gallery Single */
@@ -78,6 +82,18 @@
 
         }, 100 );
 
+        /* Start scroll menu */
+        let scrollTop = $(this).scrollTop(),
+            header_menu = $( '#header' ),
+            height = header_menu.height();
+
+        if ( scrollTop > height ) {
+            header_menu.addClass( 'header-fix' );
+        } else {
+            header_menu.removeClass( 'header-fix' );
+        }
+        /* End scroll menu */
+
     });
 
     /* Start function owlCarouse item */
@@ -99,7 +115,7 @@
                 if ( $settings_slider !== undefined ) {
 
                     $loop_slider    =   typeof ( $settings_slider['loop'] ) !== "undefined" ? $settings_slider['loop'] : false;
-                    $autoplay       =   typeof ( $settings_slider['autoplay'] ) !== "undefined" ? $settings_slider['autoplay']: false;
+                    $autoplay       =   typeof ( $settings_slider['autoplay'] ) !== "undefined" ? parseInt( $settings_slider['autoplay'] ): false;
                     $active_dots    =   typeof ( $settings_slider['dots'] ) !== "undefined" ? $settings_slider['dots'] : false;
                     $active_nav     =   typeof ( $settings_slider['nav'] ) !== "undefined" ?  $settings_slider['nav'] : false;
 

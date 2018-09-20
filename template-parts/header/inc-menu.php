@@ -5,7 +5,7 @@
     $traveller_information_show_hide = $traveller_options['traveller_information_show_hide'] == '' ? 1 : $traveller_options['traveller_information_show_hide'];
 ?>
 
-<header id="home" class="header">
+<header id="header" class="header">
     <nav id="navigation" class="navbar-expand-lg">
 
         <?php

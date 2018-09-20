@@ -31,5 +31,4 @@ get_template_part('template-parts/header/inc','menu');
 
 <!--Start Sticky Footer-->
 <div class="sticky-footer">
-
-
+    <?php get_template_part('template-parts/inc','slider'); ?>

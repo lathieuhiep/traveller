@@ -181,6 +181,36 @@ Redux::setSection( $traveller_opt_name, array(
     'icon'              =>  'el el-th-large',
 ));
 
+// Slider Option
+Redux::setSection( $traveller_opt_name, array(
+    'title'             =>  esc_html__( 'Slider', 'traveller' ),
+    'id'                =>  'traveller_slider_option',
+    'desc'              =>  esc_html__( 'Slider all config', 'traveller' ),
+    'customizer_width'  =>  '400px',
+    'subsection'        => true,
+    'fields'            => array(
+
+        array(
+            'title' => esc_html__('Auto Play?', 'traveller'),
+            'id' => 'traveller_slider_auto',
+            'type' => 'button_set',
+            'options' => array(
+                1 => 'Yes',
+                0 => 'No',
+            ),
+            'default' => 1
+        ),
+
+        array(
+            'id'        =>  'traveller_slider_global',
+            'type'      =>  'gallery',
+            'title'     =>  esc_html__( 'Slider', 'traveller' ),
+            'desc' => esc_html__('Slides show all page', 'event_conference'),
+        ),
+
+    ),
+));
+
 // Favicon Config
 Redux::setSection( $traveller_opt_name, array(
     'title'         =>  esc_html__( 'Favicon', 'traveller' ),
@@ -200,7 +230,7 @@ Redux::setSection( $traveller_opt_name, array(
     )
 ));
 
-//Loading config
+// Loading config
 Redux::setSection( $traveller_opt_name, array(
     'title'         =>  esc_html__( 'Loading config', 'traveller' ),
     'id'            =>  'traveller_general_loading',
@@ -225,7 +255,7 @@ Redux::setSection( $traveller_opt_name, array(
     )
 ));
 
-//Background Options
+// Background Options
 Redux::setSection( $traveller_opt_name, array(
     'title'             =>  esc_html__( 'Background', 'traveller' ),
     'id'                =>  'traveller_background',
