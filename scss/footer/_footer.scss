@@ -1,6 +1,7 @@
 .site-footer {
   background-color: #333;
   color: #ffffff;
+  padding-bottom: 65px;
 
   section {
     &.widget {
@@ -27,7 +28,7 @@
   }
 }
 .site-footer__multi-column {
-  padding: 30px 0;
+  padding: 30px 0 0;
 
   .item-multi-column  {
     &:last-child {
@@ -78,5 +79,38 @@
 .site-footer__social {
   .txt-connect {
     margin: 0 15px 0 0;
+  }
+}
+.site-footer-fix {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f0e8;
+  box-shadow: 5px 4px 15px #555;
+  z-index: 99;
+
+  .text-hotline {
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 30px 15px 85px;
+    background-color: rgb(231, 67, 78);
+  }
+}
+.site-footer-fix__left {
+  p {
+    margin: 0;
+  }
+  .list-hotline {
+    padding: 10px 10px 10px 30px;
+    color: #333333;
+
+    .list-hotline__box {
+      padding-right: 30px;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
   }
 }

@@ -2,11 +2,11 @@
 //Global variable redux
 global $traveller_options;
 
-$traveller_footer_multi_column_2     =   $traveller_options ["traveller_footer_multi_column_2"];
-$traveller_footer_multi_column_2_w1  =   $traveller_options ["traveller_footer_multi_column_2_w1"];
-$traveller_footer_multi_column_2_w2  =   $traveller_options ["traveller_footer_multi_column_2_w2"];
-$traveller_footer_multi_column_2_w3  =   $traveller_options ["traveller_footer_multi_column_2_w3"];
-$traveller_footer_multi_column_2_w4  =   $traveller_options ["traveller_footer_multi_column_2_w4"];
+$traveller_footer_multi_column_2     =   $traveller_options ['traveller_footer_multi_column_2'];
+$traveller_footer_multi_column_2_w1  =   $traveller_options ['traveller_footer_multi_column_2_w1'];
+$traveller_footer_multi_column_2_w2  =   $traveller_options ['traveller_footer_multi_column_2_w2'];
+$traveller_footer_multi_column_2_w3  =   $traveller_options ['traveller_footer_multi_column_2_w3'];
+$traveller_footer_multi_column_2_w4  =   $traveller_options ['traveller_footer_multi_column_2_w4'];
 
 if( is_active_sidebar( 'traveller-footer-2-1' ) || is_active_sidebar( 'traveller-footer-2-2' ) || is_active_sidebar( 'traveller-footer-2-3' ) || is_active_sidebar( 'traveller-footer-2-4' ) ) :
     ?>

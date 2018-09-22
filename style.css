@@ -172,7 +172,7 @@ pre {
   opacity: 0;
   width: 40px;
   height: 40px;
-  bottom: 0;
+  bottom: 50px;
   cursor: pointer;
   position: fixed;
   right: 15px;
@@ -197,7 +197,7 @@ pre {
 
 #back-top.active_top {
   opacity: 1;
-  bottom: 15px;
+  bottom: 75px;
 }
 
 #back-top:hover {
@@ -1855,6 +1855,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .site-footer {
   background-color: #333;
   color: #ffffff;
+  padding-bottom: 65px;
 }
 
 .site-footer section.widget {
@@ -1880,7 +1881,7 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 }
 
 .site-footer__multi-column {
-  padding: 30px 0;
+  padding: 30px 0 0;
 }
 
 .site-footer__multi-column .item-multi-column:last-child {
@@ -1934,6 +1935,40 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 
 .site-footer__social .txt-connect {
   margin: 0 15px 0 0;
+}
+
+.site-footer-fix {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f1f0e8;
+  box-shadow: 5px 4px 15px #555;
+  z-index: 99;
+}
+
+.site-footer-fix .text-hotline {
+  display: inline-block;
+  font-size: 20px;
+  padding: 15px 30px 15px 85px;
+  background-color: #e7434e;
+}
+
+.site-footer-fix__left p {
+  margin: 0;
+}
+
+.site-footer-fix__left .list-hotline {
+  padding: 10px 10px 10px 30px;
+  color: #333333;
+}
+
+.site-footer-fix__left .list-hotline .list-hotline__box {
+  padding-right: 30px;
+}
+
+.site-footer-fix__left .list-hotline .list-hotline__box:last-child {
+  padding-right: 0;
 }
 
 /**

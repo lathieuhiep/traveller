@@ -958,6 +958,30 @@ Redux::setSection( $traveller_opt_name, array(
 
 ));
 
+// Footer Sticky
+Redux::setSection( $traveller_opt_name, array(
+    'title'         =>  esc_html__( 'Footer Sticky', 'traveller' ),
+    'id'            =>  'traveller_footer_sticky',
+    'subsection'    =>  true,
+    'fields'        =>  array(
+
+        array(
+            'id'        =>  'traveller_footer_sticky_title',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Title', 'traveller' ),
+            'default'   =>  'HOTLINE HỖ TRỢ',
+        ),
+
+        array(
+            'id'        =>  'traveller_footer_sticky_hotline',
+            'type'      =>  'multi_text',
+            'title'     =>  esc_html__( 'Multi Hotline', 'traveller' ),
+            'default'   =>  '<strong>Hotline:</strong> 0888.34.26.26',
+        ),
+
+    )
+));
+
 /* End Footer Options */
 
 

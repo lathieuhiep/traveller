@@ -9,6 +9,8 @@
 
     get_template_part( 'template-parts/footer/inc','footer-column' );
 
+    get_template_part( 'template-parts/footer/inc','footer-sticky' );
+
     ?>
 
 </footer>
