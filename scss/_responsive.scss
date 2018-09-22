@@ -112,7 +112,10 @@
         }
         a {
           display: inline-block;
-          padding: 15px 0;
+          padding: 10px 0;
+          color: #232323;
+          border-right: 0;
+          text-transform: capitalize;
         }
         .sub-menu {
           display: none;
@@ -121,6 +124,9 @@
           visibility: visible;
           border-top: 0;
           background-color: transparent;
+          border: none;
+          @include border-radius(0);
+          @include box-shadow(none);
           @include transition-duration(0s);
 
           li {
@@ -151,6 +157,7 @@
   }
   .icon_menu_item_mobile {
     display: block;
+
   }
 
 }

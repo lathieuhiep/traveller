@@ -726,15 +726,15 @@ Redux::setSection( $traveller_opt_name, array(
     'icon'              =>  'el el-arrow-down'
 ));
 
-//Footer Content
+// Footer Multi Column 1
 Redux::setSection( $traveller_opt_name, array(
-    'title'         =>  esc_html__( 'Footer content', 'traveller' ),
-    'id'            =>  'traveller_footer_content',
+    'title'         =>  esc_html__( 'Footer Multi Column 1', 'traveller' ),
+    'id'            =>  'traveller_footer_multi_column_1',
     'desc'          =>  esc_html__( '', 'traveller' ),
     'subsection'    =>  true,
     'fields'        =>  array(
         array(
-            'id'        =>  'traveller_footer_column_col',
+            'id'        =>  'traveller_footer_multi_column_1',
             'type'      =>  'image_select',
             'title'     =>  esc_html__( 'Number of Footer Columns', 'traveller' ),
             'subtitle'  =>  esc_html__( 'Controls the number of columns in the footer', 'traveller' ),
@@ -746,29 +746,29 @@ Redux::setSection( $traveller_opt_name, array(
                 ),
 
                 '1' =>  array(
-                    'alt'   =>  '1 Columnn',
+                    'alt'   =>  '1 Column',
                     'img'   =>  get_theme_file_uri(  '/extension/assets/images/1column.png' )
                 ),
 
                 '2' =>  array(
-                    'alt'   =>  '2 Columnn',
+                    'alt'   =>  '2 Column',
                     'img'   =>  get_theme_file_uri( '/extension/assets/images/2column.png' )
                 ),
                 '3' =>  array(
-                    'alt'   =>  '3 Columnn',
+                    'alt'   =>  '3 Column',
                     'img'   =>  get_theme_file_uri(   '/extension/assets/images/3column.png' )
                 ),
                 '4' =>  array(
-                    'alt'   =>  '4 Columnn',
+                    'alt'   =>  '4 Column',
                     'img'   =>  get_theme_file_uri( '/extension/assets/images/4column.png' )
                 ),
             ),
         ),
 
         array(
-            'id'            =>  'traveller_footer_column_w1',
+            'id'            =>  'traveller_footer_multi_column_1_w1',
             'type'          =>  'slider',
-            'title'         =>  esc_html__( 'Footer width 1', 'traveller' ),
+            'title'         =>  esc_html__( 'Column width 1', 'traveller' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
             'default'       =>  1,
@@ -777,15 +777,15 @@ Redux::setSection( $traveller_opt_name, array(
             'max'           =>  12,
             'display_value' =>  'label',
             'required'      =>  array(
-                array( 'traveller_footer_column_col', 'equals','1', '2', '3', '4' ),
-                array( 'traveller_footer_column_col', '!=', '0' ),
+                array( 'traveller_footer_multi_column_1', 'equals','1', '2', '3', '4' ),
+                array( 'traveller_footer_multi_column_1', '!=', '0' ),
             )
         ),
 
         array(
-            'id'            =>  'traveller_footer_column_w2',
+            'id'            =>  'traveller_footer_multi_column_1_w2',
             'type'          =>  'slider',
-            'title'         =>  esc_html__( 'Footer width 2', 'traveller' ),
+            'title'         =>  esc_html__( 'Column width 2', 'traveller' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
             'default'       =>  1,
@@ -794,16 +794,16 @@ Redux::setSection( $traveller_opt_name, array(
             'max'           =>  12,
             'display_value' =>  'label',
             'required'      =>  array(
-                array( 'traveller_footer_column_col', 'equals', '2', '3', '4' ),
-                array( 'traveller_footer_column_col', '!=', '1' ),
-                array( 'traveller_footer_column_col', '!=', '0' ),
+                array( 'traveller_footer_multi_column_1', 'equals', '2', '3', '4' ),
+                array( 'traveller_footer_multi_column_1', '!=', '1' ),
+                array( 'traveller_footer_multi_column_1', '!=', '0' ),
             )
         ),
 
         array(
-            'id'            =>  'traveller_footer_column_w3',
+            'id'            =>  'traveller_footer_multi_column_1_w3',
             'type'          =>  'slider',
-            'title'         =>  esc_html__( 'Footer width 3', 'traveller' ),
+            'title'         =>  esc_html__( 'Column width 3', 'traveller' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
             'default'       =>  1,
@@ -812,17 +812,17 @@ Redux::setSection( $traveller_opt_name, array(
             'max'           =>  12,
             'display_value' =>  'label',
             'required'      =>  array(
-                array( 'traveller_footer_column_col', 'equals', '3', '4' ),
-                array( 'traveller_footer_column_col', '!=', '1' ),
-                array( 'traveller_footer_column_col', '!=', '2' ),
-                array( 'traveller_footer_column_col', '!=', '0' ),
+                array( 'traveller_footer_multi_column_1', 'equals', '3', '4' ),
+                array( 'traveller_footer_multi_column_1', '!=', '1' ),
+                array( 'traveller_footer_multi_column_1', '!=', '2' ),
+                array( 'traveller_footer_multi_column_1', '!=', '0' ),
             )
         ),
 
         array(
-            'id'            =>  'traveller_footer_column_w4',
+            'id'            =>  'traveller_footer_multi_column_1_w4',
             'type'          =>  'slider',
-            'title'         =>  esc_html__( 'Footer width 4', 'traveller' ),
+            'title'         =>  esc_html__( 'Column width 4', 'traveller' ),
             'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
             'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
             'default'       =>  1,
@@ -831,39 +831,131 @@ Redux::setSection( $traveller_opt_name, array(
             'max'           =>  12,
             'display_value' =>  'label',
             'required'      =>  array(
-                array( 'traveller_footer_column_col',  'equals', '4' ),
-                array( 'traveller_footer_column_col', '!=', '1' ),
-                array( 'traveller_footer_column_col', '!=', '2' ),
-                array( 'traveller_footer_column_col', '!=', '3' ),
-                array( 'traveller_footer_column_col', '!=', '0' ),
+                array( 'traveller_footer_multi_column_1',  'equals', '4' ),
+                array( 'traveller_footer_multi_column_1', '!=', '1' ),
+                array( 'traveller_footer_multi_column_1', '!=', '2' ),
+                array( 'traveller_footer_multi_column_1', '!=', '3' ),
+                array( 'traveller_footer_multi_column_1', '!=', '0' ),
             )
         ),
     )
 
 ));
 
-//Copyright
+// Footer Multi Column 2
 Redux::setSection( $traveller_opt_name, array(
-    'title'         =>  esc_html__( 'Copyright', 'traveller' ),
-    'id'            =>  'traveller_footer_copyright',
+    'title'         =>  esc_html__( 'Footer Multi Column 2', 'traveller' ),
+    'id'            =>  'traveller_footer_multi_column_2',
     'desc'          =>  esc_html__( '', 'traveller' ),
     'subsection'    =>  true,
     'fields'        =>  array(
         array(
-            'id'            =>  'traveller_footer_copyright_editor',
-            'type'          =>  'editor',
-            'title'         =>  esc_html__( 'Enter content copyright', 'traveller' ),
-            'full_width'    =>  true,
-            'default'       =>  'Copyright &amp; DiepLK',
-            'args'          =>  array(
-                'wpautop'       => false,
-                'media_buttons' => false,
-                'textarea_rows' => 5,
-                'teeny'         => false,
-                'quicktags'     => true,
+            'id'        =>  'traveller_footer_multi_column_2',
+            'type'      =>  'image_select',
+            'title'     =>  esc_html__( 'Number of Footer Columns', 'traveller' ),
+            'subtitle'  =>  esc_html__( 'Controls the number of columns in the footer', 'traveller' ),
+            'default'   =>  0,
+            'options'   =>  array(
+                '0' =>  array(
+                    'alt'   =>  'No Footer',
+                    'img'   =>  get_theme_file_uri( '/extension/assets/images/no-footer.png' )
+                ),
+
+                '1' =>  array(
+                    'alt'   =>  '1 Column',
+                    'img'   =>  get_theme_file_uri(  '/extension/assets/images/1column.png' )
+                ),
+
+                '2' =>  array(
+                    'alt'   =>  '2 Column',
+                    'img'   =>  get_theme_file_uri( '/extension/assets/images/2column.png' )
+                ),
+                '3' =>  array(
+                    'alt'   =>  '3 Column',
+                    'img'   =>  get_theme_file_uri(   '/extension/assets/images/3column.png' )
+                ),
+                '4' =>  array(
+                    'alt'   =>  '4 Column',
+                    'img'   =>  get_theme_file_uri( '/extension/assets/images/4column.png' )
+                ),
+            ),
+        ),
+
+        array(
+            'id'            =>  'traveller_footer_multi_column_2_w1',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 1', 'traveller' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
+            'default'       =>  1,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'traveller_footer_multi_column_2', 'equals','1', '2', '3', '4' ),
+                array( 'traveller_footer_multi_column_2', '!=', '0' ),
+            )
+        ),
+
+        array(
+            'id'            =>  'traveller_footer_multi_column_2_w2',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 2', 'traveller' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
+            'default'       =>  1,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'traveller_footer_multi_column_2', 'equals', '2', '3', '4' ),
+                array( 'traveller_footer_multi_column_2', '!=', '1' ),
+                array( 'traveller_footer_multi_column_2', '!=', '0' ),
+            )
+        ),
+
+        array(
+            'id'            =>  'traveller_footer_multi_column_2_w3',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 3', 'traveller' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
+            'default'       =>  1,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'traveller_footer_multi_column_2', 'equals', '3', '4' ),
+                array( 'traveller_footer_multi_column_2', '!=', '1' ),
+                array( 'traveller_footer_multi_column_2', '!=', '2' ),
+                array( 'traveller_footer_multi_column_2', '!=', '0' ),
+            )
+        ),
+
+        array(
+            'id'            =>  'traveller_footer_multi_column_2_w4',
+            'type'          =>  'slider',
+            'title'         =>  esc_html__( 'Column width 4', 'traveller' ),
+            'subtitle'      =>  esc_html__( 'Select the number of columns to display in the footer', 'traveller' ),
+            'desc'          =>  esc_html__( 'Min: 1, max: 12, default value: 1', 'traveller' ),
+            'default'       =>  1,
+            'min'           =>  1,
+            'step'          =>  1,
+            'max'           =>  12,
+            'display_value' =>  'label',
+            'required'      =>  array(
+                array( 'traveller_footer_multi_column_2',  'equals', '4' ),
+                array( 'traveller_footer_multi_column_2', '!=', '1' ),
+                array( 'traveller_footer_multi_column_2', '!=', '2' ),
+                array( 'traveller_footer_multi_column_2', '!=', '3' ),
+                array( 'traveller_footer_multi_column_2', '!=', '0' ),
             )
         ),
     )
+
 ));
 
 /* End Footer Options */

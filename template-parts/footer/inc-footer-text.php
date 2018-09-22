@@ -6,14 +6,9 @@ $traveller_copyright = $traveller_options ['traveller_footer_copyright_editor'] 
 
 ?>
 
-<div class="site-footer__bottom">
+<div class="site-footer__text">
     <div class="container">
         <div class="site-copyright-menu d-flex align-items-center">
-
-            <div class="site-copyright">
-                <?php echo wp_kses_post( $traveller_copyright ); ?>
-            </div>
-
             <div class="site-footer__menu">
                 <nav>
 
@@ -29,7 +24,7 @@ $traveller_copyright = $traveller_options ['traveller_footer_copyright_editor'] 
 
                     else:
 
-                        ?>
+                    ?>
 
                         <ul class="main-menu">
                             <li>
@@ -44,6 +39,15 @@ $traveller_copyright = $traveller_options ['traveller_footer_copyright_editor'] 
                 </nav>
             </div>
 
+            <div class="site-footer__social d-flex align-items-center">
+                <p class="txt-connect">
+                    <?php esc_html_e( 'Kết nối với chúng tôi', 'traveller' ); ?>
+                </p>
+
+                <div class="site-footer__social-list d-flex align-items-center social-network-toTopFromBottom">
+                    <?php traveller_get_social_url(); ?>
+                </div>
+            </div>
         </div>
     </div>
 </div>

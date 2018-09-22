@@ -52,11 +52,6 @@ if( !function_exists('traveller_setup') ):
         /*  Post Type   */
         add_theme_support( 'post-formats', array( 'gallery', 'video', 'audio' ) );
 
-        /*
-	    * This theme styles the visual editor to resemble the theme style,
-	    * specifically font, colors, icons, and column width.
-	    */
-        add_editor_style( array( 'css/editor-style.css', traveller_fonts_url()) );
     }
 
     add_action( 'after_setup_theme', 'traveller_setup' );
@@ -124,23 +119,43 @@ function traveller_widgets_init() {
             'description'       =>  esc_html__( 'Display sidebar right or left on all page.', 'traveller' )
         ),
 
-        'traveller-footer-1'   =>  array(
-            'name'              =>  esc_html__( 'Footer 1', 'traveller' ),
+        'traveller-footer-1-1'   =>  array(
+            'name'              =>  esc_html__( 'Footer 1-1', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 1 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-2'   =>  array(
-            'name'              =>  esc_html__( 'Footer 2', 'traveller' ),
+        'traveller-footer-1-2'   =>  array(
+            'name'              =>  esc_html__( 'Footer 1-2', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 2 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-3'   =>  array(
-            'name'              =>  esc_html__( 'Footer 3', 'traveller' ),
+        'traveller-footer-1-3'   =>  array(
+            'name'              =>  esc_html__( 'Footer 1-3', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 3 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-4'   =>  array(
-            'name'              =>  esc_html__( 'Footer 4', 'traveller' ),
+        'traveller-footer-1-4'   =>  array(
+            'name'              =>  esc_html__( 'Footer 1-4', 'traveller' ),
+            'description'       =>  esc_html__('Display footer column 4 on all page.', 'traveller' )
+        ),
+
+        'traveller-footer-2-1'   =>  array(
+            'name'              =>  esc_html__( 'Footer 2-1', 'traveller' ),
+            'description'       =>  esc_html__('Display footer column 1 on all page.', 'traveller' )
+        ),
+
+        'traveller-footer-2-2'   =>  array(
+            'name'              =>  esc_html__( 'Footer 2-2', 'traveller' ),
+            'description'       =>  esc_html__('Display footer column 2 on all page.', 'traveller' )
+        ),
+
+        'traveller-footer-2-3'   =>  array(
+            'name'              =>  esc_html__( 'Footer 2-3', 'traveller' ),
+            'description'       =>  esc_html__('Display footer column 3 on all page.', 'traveller' )
+        ),
+
+        'traveller-footer-2-4'   =>  array(
+            'name'              =>  esc_html__( 'Footer 2-4', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 4 on all page.', 'traveller' )
         )
 
@@ -199,6 +214,8 @@ function traveller_register_front_end() {
     /*
     * Start Get Css Front End
     * */
+
+    wp_enqueue_style( 'traveller-fonts', traveller_fonts_url(), array(), null );
 
     /* Start main Css */
     wp_enqueue_style( 'traveller-library', get_theme_file_uri( '/css/library.min.css' ), array(), '' );
@@ -352,12 +369,12 @@ if ( ! function_exists( 'traveller_fonts_url' ) ) :
             $traveller_font_families = array();
 
             if ( 'off' !== $traveller_font_google ) {
-                $traveller_font_families[] = 'Roboto:400,700';
+                $traveller_font_families[] = 'Roboto:400';
             }
 
             $traveller_query_args = array(
                 'family' => urlencode( implode( '|', $traveller_font_families ) ),
-                'subset' => urlencode( 'latin' ),
+                'subset' => urlencode( 'latin,vietnamese' ),
             );
 
             $traveller_fonts_url = add_query_arg( $traveller_query_args, 'https://fonts.googleapis.com/css' );

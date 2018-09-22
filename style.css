@@ -30,6 +30,14 @@
 /**
 # General
 -----------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'Cambria';
+  src: url("fonts/Cambria.eot");
+  src: url("fonts/Cambria.eot?#iefix") format("embedded-opentype"), url("fonts/Cambria.woff2") format("woff2"), url("fonts/Cambria.woff") format("woff"), url("fonts/Cambria.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   outline: none !important;
 }
@@ -40,7 +48,7 @@ html {
 
 body {
   min-height: 100vh;
-  line-height: 1.8em;
+  line-height: 1.5em;
   overflow-x: hidden;
   font-size: 15px;
   color: #777777;
@@ -62,7 +70,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 15px;
-  font-weight: 700;
+  font-family: "Cambria";
+  font-weight: normal;
   color: #333333;
 }
 
@@ -199,6 +208,9 @@ pre {
 .social-network-item {
   display: inline-block;
   margin-right: 5px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .social-network-item:last-child {
@@ -669,8 +681,6 @@ form.post-password-form p input[type='submit'] {
 
 .information__social-network .social-network-item {
   margin: 0;
-  width: 30px;
-  text-align: center;
 }
 
 /* Menu */
@@ -700,8 +710,8 @@ header.header.header-fix .site-logo img {
   width: 120px !important;
 }
 
-header.header.header-fix .site-menu ul > li {
-  padding: 15px 0;
+header.header.header-fix .site-menu > ul > li {
+  padding: 20px 0;
 }
 
 header.header .navbar {
@@ -719,6 +729,7 @@ header.header .navbar {
 .header-bottom button.navbar-toggler {
   padding: 0;
   border: 0;
+  color: #ffffff;
 }
 
 .site-logo {
@@ -769,8 +780,9 @@ header.header .navbar {
   text-shadow: none;
   display: block;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
+  border-right: 1px solid #ffffff;
 }
 
 .site-menu ul li a:hover {
@@ -780,18 +792,24 @@ header.header .navbar {
 
 .site-menu ul li:last-child a {
   padding-right: 0;
+  border-right: 0;
 }
 
 .site-menu ul li .sub-menu {
   min-width: 160px;
-  border-top: 1px solid #f7941d;
-  background-color: #eeeeee;
+  background-color: #ffffff;
   position: absolute;
   top: 120%;
   left: 0;
   z-index: -1;
   visibility: hidden;
   opacity: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;
   -o-transition: all 0.4s ease-out;
@@ -799,12 +817,17 @@ header.header .navbar {
 }
 
 .site-menu ul li .sub-menu li {
-  padding: 8px 0;
+  padding: 10px 15px;
   display: block;
 }
 
 .site-menu ul li .sub-menu li a {
   white-space: nowrap;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #333333;
+  padding: 0;
+  border-right: 0;
 }
 
 .site-menu ul li .sub-menu li .sub-menu {
@@ -907,9 +930,12 @@ section.widget:last-child {
 }
 
 section.widget .widget-title {
+  display: inline-block;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
   font-size: 16px;
+  border-bottom: 1px solid #e7434e;
 }
 
 section.widget ul {
@@ -986,8 +1012,8 @@ section.widget.widget_calendar table {
 
 section.widget.widget_calendar table caption {
   padding: 0;
+  color: #ffffff;
   margin-bottom: 15px;
-  text-align: center;
 }
 
 section.widget.widget_calendar table tr {
@@ -1826,18 +1852,46 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 /**
 # Footer
 -----------------------------------------------------------------------------*/
+.site-footer {
+  background-color: #333;
+  color: #ffffff;
+}
+
 .site-footer section.widget {
   margin-bottom: 15px;
 }
 
-.site-footer__top {
-  border-top: 1px solid #eeeeee;
+.site-footer section.widget .widget-title {
+  color: #ffffff;
+}
+
+.site-footer section.widget a {
+  color: #ffffff;
+}
+
+.site-footer section.widget.widget_text ul {
+  list-style-type: inherit;
+  padding-left: 15px;
+}
+
+.site-footer section.widget.widget_text ul li {
+  padding: 0;
+  border-bottom: none;
+}
+
+.site-footer__multi-column {
   padding: 30px 0;
 }
 
-.site-footer__bottom {
-  border-top: 1px solid #eeeeee;
-  padding: 10px 0;
+.site-footer__multi-column .item-multi-column:last-child {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #5d5d5d;
+}
+
+.site-footer__text {
+  padding: 20px 0;
+  border-bottom: 1px solid #666;
 }
 
 .site-copyright {
@@ -1849,7 +1903,6 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 }
 
 .site-footer__menu {
-  text-align: right;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -1866,12 +1919,21 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   padding: 0 5px;
 }
 
+.site-footer__menu ul li:first-child {
+  padding-left: 0;
+}
+
 .site-footer__menu ul li:last-child {
   padding-right: 0;
 }
 
 .site-footer__menu ul li a {
-  font-size: 12px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.site-footer__social .txt-connect {
+  margin: 0 15px 0 0;
 }
 
 /**
@@ -1965,7 +2027,10 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   }
   .site-menu ul li a {
     display: inline-block;
-    padding: 15px 0;
+    padding: 10px 0;
+    color: #232323;
+    border-right: 0;
+    text-transform: capitalize;
   }
   .site-menu ul li .sub-menu {
     display: none;
@@ -1974,6 +2039,13 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
     visibility: visible;
     border-top: 0;
     background-color: transparent;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     -webkit-transition-duration: 0s;
     -moz-transition-duration: 0s;
     -o-transition-duration: 0s;
