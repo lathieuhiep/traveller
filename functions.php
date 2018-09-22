@@ -91,7 +91,6 @@ if ( class_exists( 'ReduxFramework' ) ) {
  */
 require get_parent_theme_file_path( '/extension/meta-box/meta-box-options.php' );
 
-
 if ( did_action( 'elementor/loaded' ) ) :
     /*
      * Required: Elementor
