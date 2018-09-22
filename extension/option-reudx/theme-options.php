@@ -979,6 +979,13 @@ Redux::setSection( $traveller_opt_name, array(
             'default'   =>  '<strong>Hotline:</strong> 0888.34.26.26',
         ),
 
+        array(
+            'id'        =>  'traveller_footer_sticky_phone',
+            'type'      =>  'text',
+            'title'     =>  esc_html__( 'Phone', 'traveller' ),
+            'default'   =>  'Tổng đài: 0888.34.26.26',
+        ),
+
     )
 ));
 

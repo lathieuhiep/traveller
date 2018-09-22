@@ -4,10 +4,11 @@ global $traveller_options;
 
 $traveller_footer_sticky_title     =   $traveller_options ['traveller_footer_sticky_title'];
 $traveller_footer_sticky_hotline   =   $traveller_options ['traveller_footer_sticky_hotline'];
+$traveller_footer_sticky_phone      =   $traveller_options ['traveller_footer_sticky_phone'];
 
 ?>
 
-<div class="site-footer-fix d-flex">
+<div class="site-footer-fix d-flex align-items-center justify-content-between">
     <div class="site-footer-fix__left d-flex">
         <p class="text-hotline d-flex align-items-center">
             <?php echo esc_html( $traveller_footer_sticky_title ); ?>
@@ -49,5 +50,11 @@ $traveller_footer_sticky_hotline   =   $traveller_options ['traveller_footer_sti
             </div>
 
         <?php endif; ?>
+    </div>
+
+    <div class="site-footer-fix__right">
+        <span class="phone">
+            <?php echo esc_html( $traveller_footer_sticky_phone ); ?>
+        </span>
     </div>
 </div>

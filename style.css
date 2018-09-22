@@ -1971,6 +1971,18 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   padding-right: 0;
 }
 
+.site-footer-fix__right {
+  padding-right: 60px;
+  padding-left: 15px;
+}
+
+.site-footer-fix__right span {
+  font-size: 20px;
+  color: #e7434e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 /**
 # Responsive
 -----------------------------------------------------------------------------*/

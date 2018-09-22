@@ -100,8 +100,12 @@ if ( did_action( 'elementor/loaded' ) ) :
 
 endif;
 
+/* Require Post Type */
+require get_parent_theme_file_path( '/extension/post-type/tour.php' );
+require get_parent_theme_file_path( '/extension/post-type/hotel.php' );
+
 /* Require Widgets */
-foreach(glob( get_parent_theme_file_path( '/extension/widgets/*.php' ) ) as $traveller_file_widgets ) {
+foreach( glob( get_parent_theme_file_path( '/extension/widgets/*.php' ) ) as $traveller_file_widgets ) {
     require $traveller_file_widgets;
 }
 
@@ -369,7 +373,7 @@ if ( ! function_exists( 'traveller_fonts_url' ) ) :
             $traveller_font_families = array();
 
             if ( 'off' !== $traveller_font_google ) {
-                $traveller_font_families[] = 'Roboto:400';
+                $traveller_font_families[] = 'Roboto:400,700';
             }
 
             $traveller_query_args = array(
