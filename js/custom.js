@@ -56,6 +56,27 @@
         $( document ).general_owlCarousel_item( '.site-post-slides' );
         /* End Gallery Single */
 
+        /* Start Gallery Single Tour */
+
+        let site_gallery_tour = $('#site-gallery-tour');
+
+        if ( site_gallery_tour.length ) {
+
+            site_gallery_tour.lightSlider({
+                gallery: true,
+                item: 1,
+                loop: true,
+                thumbItem: 5,
+                slideMargin: 0,
+                enableDrag: true,
+                currentPagerPosition: 'left',
+                prevHtml: '<i class="fas fa-chevron-left"></i>',
+                nextHtml: '<i class="fas fa-chevron-right"></i>'
+            });
+
+        }
+        /* End Gallery Single Tour */
+
     });
 
     $( window ).on( "load", function() {

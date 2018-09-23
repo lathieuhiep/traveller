@@ -21,6 +21,8 @@
   ## Single
   ## Pagination
   ## Comment
+# Tour
+## Single Tour
 ## Elementor
   ## Slider
 # Footer
@@ -1678,6 +1680,47 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 .comments-area .comment-list li ol.children {
   margin: 0;
   padding-left: 80px;
+}
+
+/**
+# Tour
+-----------------------------------------------------------------------------*/
+/* Single Tour */
+.site-single-tour .site-image-tour .lSAction a {
+  width: auto;
+  height: auto;
+  color: #ffffff;
+  font-size: 30px;
+  opacity: 1;
+  z-index: 10;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.site-single-tour .site-image-tour .lSAction a.lSPrev {
+  left: -30px;
+}
+
+.site-single-tour .site-image-tour .lSAction a.lSNext {
+  right: -30px;
+}
+
+.site-single-tour .site-image-tour .lSAction a:hover {
+  color: #e7434e;
+}
+
+.site-single-tour .site-image-tour:hover .lSAction a.lSPrev {
+  left: 15px;
+}
+
+.site-single-tour .site-image-tour:hover .lSAction a.lSNext {
+  right: 15px;
+}
+
+#site-gallery-tour .item-gallery img {
+  width: 100%;
 }
 
 /**
