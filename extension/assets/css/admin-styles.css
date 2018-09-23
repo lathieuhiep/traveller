@@ -311,3 +311,12 @@
 .rwmb-field.rwmb-heading-wrapper p.description {
     margin: 10px 0 0;
 }
+.cmb2-wrap input.cmb2-text-money {
+    width: 150px !important;
+}
+.cmb-tab-panel .cmb-group-title.cmbhandle-title {
+    margin: 0 !important;
+}
+.cmb2-metabox .cmb-tab-panel .cmbhandle:before {
+    right: 25px;
+}
