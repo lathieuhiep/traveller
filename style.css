@@ -1686,6 +1686,14 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
 # Tour
 -----------------------------------------------------------------------------*/
 /* Single Tour */
+#site-gallery-tour .item-gallery img {
+  width: 100%;
+}
+
+.site-single-tour .site-image-tour {
+  margin-bottom: 20px;
+}
+
 .site-single-tour .site-image-tour .lSAction a {
   width: auto;
   height: auto;
@@ -1719,8 +1727,38 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   right: 15px;
 }
 
-#site-gallery-tour .item-gallery img {
-  width: 100%;
+.site-single-tour .single-info-tour .title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.site-single-tour .single-info-tour__box span.price {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #e7434e;
+}
+
+.site-single-tour .single-info-tour__box span.price ins {
+  text-decoration: none;
+}
+
+.site-single-tour .single-info-tour__box span.price del {
+  font-size: 18px;
+}
+
+.site-single-tour .single-info-tour__meta .item {
+  margin-bottom: 15px;
+}
+
+.site-single-tour .single-info-tour__meta .item:last-child {
+  margin-bottom: 0;
+}
+
+.site-single-tour .single-info-tour__meta .item span.title-label {
+  display: inline-block;
+  width: 120px;
 }
 
 /**

@@ -683,3 +683,23 @@ function traveller_comment_form() {
     endif;
 }
 /* End comment */
+
+function priceToFloat($s)
+{
+    // convert "," to "."
+    $s = str_replace(',', '.', $s);
+    // remove all but numbers "."
+    $s = preg_replace("/[^0-9\.]/", "", $s);
+
+    // check for cents
+    $hasCents = (substr($s, -3, 1) == '.');
+    // remove all seperators
+    $s = str_replace('.', '', $s);
+    // insert cent seperator
+    if ($hasCents)
+    {
+        $s = substr($s, 0, -2) . '.' . substr($s, -2);
+    }
+    // return float
+    return (float) $s;
+}

@@ -138,7 +138,7 @@ function traveller_option_meta_boxes() {
     $traveller_meta_box_tour->add_field( array(
         'id'    =>  'traveller_meta_box_tour_regular_price',
         'name'  =>  esc_html__( 'Giá Tour' ),
-        'type'  =>  'text_money',
+        'type'  =>  'text',
         'tab'   =>  'tab_general',
         'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
         'before_field' => '₫',
@@ -147,7 +147,7 @@ function traveller_option_meta_boxes() {
     $traveller_meta_box_tour->add_field( array(
         'id'    =>  'traveller_meta_box_tour_sale_price',
         'name'  =>  esc_html__( 'Giá Tour Khuyến Mãi' ),
-        'type'  =>  'text_money',
+        'type'  =>  'text',
         'tab'   =>  'tab_general',
         'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
         'before_field' => '₫',
