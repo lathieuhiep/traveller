@@ -4,19 +4,13 @@ get_header();
 
     <div class="site-container site-single-tour">
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
+                <?php
+                while (have_posts()) : the_post();
 
-                    <?php
-                    if ( have_posts() ) : while (have_posts()) : the_post();
+                    get_template_part( 'template-parts/tour/content','single-tour' );
 
-                        get_template_part( 'template-parts/tour/content','single-tour' );
-
-                    endwhile;
-                    endif;
-                    ?>
-
-                </div>
+                endwhile;
+                ?>
             </div>
         </div>
     </div>

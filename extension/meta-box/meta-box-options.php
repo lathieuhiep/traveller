@@ -196,7 +196,14 @@ function traveller_option_meta_boxes() {
 
     $traveller_meta_box_tour->add_group_field( $traveller_meta_box_tour_group, array(
         'id'   => 'title',
-        'name' => esc_html__( 'Tiêu Đề', 'traveller' ),
+        'name' => esc_html__( 'Tiêu Đề 1', 'traveller' ),
+        'type' => 'text',
+        'default'   =>  'Ngày 1'
+    ) );
+
+    $traveller_meta_box_tour->add_group_field( $traveller_meta_box_tour_group, array(
+        'id'   => 'sub_title',
+        'name' => esc_html__( 'Tiêu Đề 2', 'traveller' ),
         'type' => 'text',
     ) );
 
@@ -204,6 +211,9 @@ function traveller_option_meta_boxes() {
         'id'   => 'content',
         'name' => esc_html__( 'Nội Dung', 'traveller' ),
         'type' => 'wysiwyg',
+        'options' => array(
+            'textarea_rows' => 15,
+        )
     ) );
 
     // Note

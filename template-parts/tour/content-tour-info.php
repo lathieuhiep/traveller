@@ -13,7 +13,7 @@ $traveller_meta_box_tour_start          =   get_post_meta( get_the_ID(), 'travel
         <?php the_title(); ?>
     </h1>
 
-    <div class="single-info-tour__box">
+    <div class="single-info-tour__box d-flex">
         <div class="single-info-tour__meta">
             <div class="item item-price">
                 <span class="price">
@@ -63,6 +63,32 @@ $traveller_meta_box_tour_start          =   get_post_meta( get_the_ID(), 'travel
                 <span class="start-tour">
                     <?php echo esc_html( $traveller_meta_box_tour_start ); ?>
                 </span>
+            </div>
+        </div>
+
+        <div class="single-info-tour__order">
+            <div class="btn-tour-order type-btn-1">
+                <a href="#">
+                    <strong>
+                        <?php esc_html_e( 'Đặt tour ngay', 'traveller' ); ?>
+                    </strong>
+
+                    <span>
+                        <?php esc_html_e( 'Đặt nhanh - giá tốt, ưu đãi nhiều hơn', 'traveller' ); ?>
+                    </span>
+                </a>
+            </div>
+
+            <div class="btn-tour-order type-btn-2">
+                <a href="#">
+                    <strong>
+                        <?php esc_html_e( 'Đặt yêu cầu', 'traveller' ); ?>
+                    </strong>
+
+                    <span>
+                        <?php esc_html_e( 'Đặt vấn đề - có ngay thứ bạn muốn', 'traveller' ); ?>
+                    </span>
+                </a>
             </div>
         </div>
     </div>

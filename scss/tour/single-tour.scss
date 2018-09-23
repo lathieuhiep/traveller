@@ -42,6 +42,18 @@
         }
       }
     }
+    .lSSlideOuter {
+      .lSPager {
+        &.lSGallery {
+          li {
+            &.active,
+            &:hover {
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
   }
   .single-info-tour {
     .title {
@@ -68,6 +80,10 @@
     }
   }
   .single-info-tour__meta {
+    padding-top: 15px;
+    padding-right: 30px;
+    @include flex(1);
+
     .item {
       margin-bottom: 15px;
 
@@ -80,6 +96,127 @@
           width: 120px;
         }
       }
+    }
+  }
+  .single-info-tour__order {
+    padding-left: 30px;
+    border-left: 1px solid #eee;
+    @include flex(1);
+
+    .btn-tour-order {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .site-single-tour__bottom {
+    margin-top: 50px;
+  }
+  .content-detail-tour {
+
+    .item-group {
+      margin-bottom: 30px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .title-main {
+        position: relative;
+        color: #c50000;
+        text-transform: uppercase;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        border-bottom: 1px dashed #c5c5c3;
+
+        &:after {
+          position: absolute;
+          content: "";
+          height: 75%;
+          width: 4px;
+          top: 0;
+          left: 0;
+          background-color: #c50000;
+        }
+      }
+      .item-itinerary {
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eee;
+
+        .item-itinerary__title {
+          font-size: 16px;
+          font-weight: bold;
+          font-family: $font-family-text;
+          text-transform: uppercase;
+
+          span {
+            color: #ffffff;
+            display: inline-block;
+            padding: 2px 8px;
+            margin-right: 5px;
+            background-color: #e7434e;
+          }
+        }
+        .item-itinerary__content {
+          font-size: 16px;
+          line-height: 1.5em;
+          text-align: justify;
+        }
+      }
+      .content {
+        ul {
+          li {
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.btn-tour-order {
+  a {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    @include border-radius(4px);
+
+    strong,
+    span {
+      display: block;
+    }
+    span {
+      font-size: 12px;
+      text-transform: none;
+    }
+  }
+  &.type-btn-1 {
+    a {
+      background: #fd6e1d;
+      background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));
+      background: -webkit-linear-gradient(top,#ffc600,#f7a62c);
+      background: -moz-linear-gradient(top,#f59000,#fd6e1d);
+      background: -ms-linear-gradient(top,#f59000,#fd6e1d);
+      background: -o-linear-gradient(top,#f59000,#fd6e1d);
+    }
+  }
+  &.type-btn-2 {
+    a {
+      background: #fd6e1d;
+      background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fd6e1d),to(#f59000));
+      background: -webkit-linear-gradient(top,#1db3ed,#3493d2);
+      background: -moz-linear-gradient(top,#f59000,#fd6e1d);
+      background: -ms-linear-gradient(top,#f59000,#fd6e1d);
+      background: -o-linear-gradient(top,#f59000,#fd6e1d);
     }
   }
 }

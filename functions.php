@@ -117,47 +117,52 @@ function traveller_widgets_init() {
 
     $traveller_widgets_arr  =   array(
 
-        'traveller-sidebar'    =>  array(
-            'name'              =>  esc_html__( 'Sidebar', 'traveller' ),
-            'description'       =>  esc_html__( 'Display sidebar right or left on all page.', 'traveller' )
+        'traveller-sidebar' =>  array(
+            'name'          =>  esc_html__( 'Sidebar', 'traveller' ),
+            'description'   =>  esc_html__( 'Display sidebar right or left on all page.', 'traveller' )
         ),
 
-        'traveller-footer-1-1'   =>  array(
+        'traveller-sidebar-single-tour' =>  array(
+            'name'          =>  esc_html__( 'Sidebar Single Tour', 'traveller' ),
+            'description'   =>  esc_html__( 'Display sidebar on single tour', 'traveller' )
+        ),
+
+        'traveller-footer-1-1'  =>  array(
             'name'              =>  esc_html__( 'Footer 1-1', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 1 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-1-2'   =>  array(
+        'traveller-footer-1-2'  =>  array(
             'name'              =>  esc_html__( 'Footer 1-2', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 2 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-1-3'   =>  array(
+        'traveller-footer-1-3'  =>  array(
             'name'              =>  esc_html__( 'Footer 1-3', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 3 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-1-4'   =>  array(
+        'traveller-footer-1-4'  =>  array(
             'name'              =>  esc_html__( 'Footer 1-4', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 4 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-2-1'   =>  array(
+        'traveller-footer-2-1'  =>  array(
             'name'              =>  esc_html__( 'Footer 2-1', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 1 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-2-2'   =>  array(
+        'traveller-footer-2-2'  =>  array(
             'name'              =>  esc_html__( 'Footer 2-2', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 2 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-2-3'   =>  array(
+        'traveller-footer-2-3'  =>  array(
             'name'              =>  esc_html__( 'Footer 2-3', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 3 on all page.', 'traveller' )
         ),
 
-        'traveller-footer-2-4'   =>  array(
+        'traveller-footer-2-4'  =>  array(
             'name'              =>  esc_html__( 'Footer 2-4', 'traveller' ),
             'description'       =>  esc_html__('Display footer column 4 on all page.', 'traveller' )
         )
