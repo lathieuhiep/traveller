@@ -93,21 +93,126 @@ function traveller_option_meta_boxes() {
         'context'       =>  'normal',
         'priority'      =>  'high',
         'show_names'    =>  true,
+        'tabs'      => array(
+
+            'tab_gallery' => array(
+                'label' =>  esc_html__( 'Gallery', 'traveller' ),
+                'icon'  =>  'dashicons-format-gallery',
+            ),
+
+            'tab_general'  => array(
+                'label' =>  esc_html__( 'General', 'traveller' ),
+                'icon'  =>  'dashicons-admin-tools',
+            ),
+
+            'tab_itinerary'  => array(
+                'label' =>  esc_html__( 'Lịch Trình', 'traveller' ),
+                'icon'  =>  'dashicons-calendar-alt',
+            ),
+
+            'tab_note'  => array(
+                'label' =>  esc_html__( 'Ghi Chú', 'traveller' ),
+                'icon'  =>  'dashicons-edit',
+            ),
+
+        ),
+
+        'tab_style' =>  'default',
+
     ) );
 
     // Gallery
     $traveller_meta_box_tour->add_field( array(
-        'id'            =>  'traveller_meta_box_tour_gallery',
-        'name'          =>  esc_html__( 'Gallery', 'traveller' ),
-        'desc'          =>  esc_html__( 'Upload Images', 'traveller' ),
-        'type'          =>  'file_list',
-        'text' => array(
-            'add_upload_files_text' => 'Replacement', // default: "Add or Upload Files"
-            'remove_image_text' => 'Replacement', // default: "Remove Image"
-            'file_text' => 'Replacement', // default: "File:"
-            'file_download_text' => 'Replacement', // default: "Download"
-            'remove_text' => 'Replacement', // default: "Remove"
+        'id'    =>  'traveller_meta_box_tour_gallery',
+        'name'  =>  esc_html__( 'Gallery', 'traveller' ),
+        'type'  =>  'file_list',
+        'tab'   =>  'tab_gallery',
+        'render_row_cb' => array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+        'text'  =>  array(
+            'add_upload_files_text' =>  esc_html__( 'Upload Images', 'traveller' ),
+            'remove_image_text'     =>  esc_html__( 'Remove Image', 'traveller' ),
         ),
+    ) );
+
+    // General
+    $traveller_meta_box_tour->add_field( array(
+        'id'    =>  'traveller_meta_box_tour_regular_price',
+        'name'  =>  esc_html__( 'Giá Tour' ),
+        'type'  =>  'text_money',
+        'tab'   =>  'tab_general',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+        'before_field' => '₫',
+    ) );
+
+    $traveller_meta_box_tour->add_field( array(
+        'id'    =>  'traveller_meta_box_tour_sale_price',
+        'name'  =>  esc_html__( 'Giá Tour Khuyến Mãi' ),
+        'type'  =>  'text_money',
+        'tab'   =>  'tab_general',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+        'before_field' => '₫',
+    ) );
+
+    $traveller_meta_box_tour->add_field( array(
+        'id'    =>  'traveller_meta_box_tour_suk',
+        'name'  =>  esc_html__( 'Mã Tour' ),
+        'type'  =>  'text',
+        'desc'  =>  'DLTN-CBT-HPCB01',
+        'tab'   =>  'tab_general',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+    ) );
+
+    $traveller_meta_box_tour->add_field( array(
+        'id'    =>  'traveller_meta_box_tour_time',
+        'name'  =>  esc_html__( 'Thời Gian Tour' ),
+        'type'  =>  'text',
+        'desc'  =>  '2 Ngày 1 Đêm',
+        'tab'   =>  'tab_general',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+    ) );
+
+    $traveller_meta_box_tour->add_field( array(
+        'id'    =>  'traveller_meta_box_tour_start',
+        'name'  =>  esc_html__( 'Thời Gian Khời hành' ),
+        'type'  =>  'text',
+        'desc'  =>  '15/8; 15/9;12,26/10; 8,22,30/11',
+        'tab'   =>  'tab_general',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+    ) );
+
+    // Itinerary
+    $traveller_meta_box_tour_group = $traveller_meta_box_tour->add_field( array(
+        'id'            =>  'traveller_meta_box_tour_group_itinerary',
+        'type'          =>  'group',
+        'tab'           =>  'tab_itinerary',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
+        'options'       =>  array(
+            'group_title'   =>  esc_html__( 'Ngày {#}', 'traveller' ), // since version 1.1.4, {#} gets replaced by row number
+            'add_button'    =>  esc_html__( 'Add Another Entry', 'traveller' ),
+            'remove_button' =>  esc_html__( 'Remove Entry', 'traveller' ),
+            'closed'        =>  true
+        ),
+    ) );
+
+    $traveller_meta_box_tour->add_group_field( $traveller_meta_box_tour_group, array(
+        'id'   => 'title',
+        'name' => esc_html__( 'Tiêu Đề', 'traveller' ),
+        'type' => 'text',
+    ) );
+
+    $traveller_meta_box_tour->add_group_field( $traveller_meta_box_tour_group, array(
+        'id'   => 'content',
+        'name' => esc_html__( 'Nội Dung', 'traveller' ),
+        'type' => 'wysiwyg',
+    ) );
+
+    // Note
+    $traveller_meta_box_tour->add_field( array(
+        'id'   => 'traveller_meta_box_tour_note',
+        'name' => esc_html__( 'Ghi Chú', 'traveller' ),
+        'type' => 'wysiwyg',
+        'tab'   =>  'tab_note',
+        'render_row_cb' =>  array( 'CMB2_Tabs', 'tabs_render_row_cb' ),
     ) );
 
 }
