@@ -468,6 +468,13 @@ function traveller_register_required_plugins() {
 
         // This is an example of how to include a plugin from the WordPress Plugin Repository
         array(
+            'name'      =>  'CMB2 Tabs',
+            'slug'      =>  'cmb2-tabs',
+            'required'  =>  true,
+        ),
+
+        // This is an example of how to include a plugin from the WordPress Plugin Repository
+        array(
             'name'      =>  'Elementor',
             'slug'      =>  'elementor',
             'required'  =>  true,
