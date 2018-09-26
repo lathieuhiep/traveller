@@ -27,5 +27,3 @@ $traveller_meta_box_tour_gallery = get_post_meta( get_the_ID(), 'traveller_meta_
     endif;
     ?>
 </div>
-
-

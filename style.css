@@ -1793,6 +1793,42 @@ section.widget.woocommerce .woocommerce-widget-layered-nav-list .woocommerce-wid
   margin-top: 50px;
 }
 
+.site-single-tour .content-excerpt-itinerary-tour {
+  padding: 15px;
+  background-color: #f1f1f1;
+  min-height: 100%;
+}
+
+.site-single-tour .content-excerpt-itinerary-tour .title {
+  color: #e7434e;
+  text-transform: uppercase;
+}
+
+.site-single-tour .content-excerpt-itinerary-tour .list .item {
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 1px 1px #ddd;
+  -moz-box-shadow: 0px 0px 1px 1px #ddd;
+  box-shadow: 0px 0px 1px 1px #ddd;
+}
+
+.site-single-tour .content-excerpt-itinerary-tour .list .item:last-child {
+  margin-bottom: 0;
+}
+
+.site-single-tour .content-excerpt-itinerary-tour .list .item-title {
+  margin: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #217834;
+  text-transform: uppercase;
+}
+
 .site-single-tour .content-detail-tour .item-group {
   margin-bottom: 30px;
 }
